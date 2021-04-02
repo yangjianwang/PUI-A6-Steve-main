@@ -1,0 +1,122 @@
+
+/*cart rendering*/
+.shopshadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 888;
+  display: none;
+}
+.shopshadow a {
+  text-decoration: none;
+  color: #333;
+}
+.shopshadow .shopbox {
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+.shopshadow .shopbox .closeshopcard {
+  float: right;
+  font-size: 24px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.shopshadow .shopbox h1 {
+  text-align: center;
+  line-height: 40px;
+}
+.shopshadow .shopbox .listline {
+  width: 100%;
+}
+.shopshadow .cardline ul {
+  min-height: 140px;
+  padding: 20px 0;
+}
+.shopshadow .cardline ul li {
+  width: 100%;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+}
+.shopshadow .cardline ul li .name,
+.shopshadow .cardline ul li .sum,
+.shopshadow .cardline ul li .price,
+.shopshadow .cardline ul li .delete {
+  width: 25%;
+}
+.shopshadow .cardline ul li .name a,
+.shopshadow .cardline ul li .sum a,
+.shopshadow .cardline ul li .price a,
+.shopshadow .cardline ul li .delete a {
+  font-size: 18px;
+  line-height: 40px;
+}
+.shopshadow .cardline ul li .name em,
+.shopshadow .cardline ul li .sum em,
+.shopshadow .cardline ul li .price em,
+.shopshadow .cardline ul li .delete em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+}
+.shopshadow .cardline ul li .name .sumnum,
+.shopshadow .cardline ul li .sum .sumnum,
+.shopshadow .cardline ul li .price .sumnum,
+.shopshadow .cardline ul li .delete .sumnum {
+  border: 1px solid #333;
+  width: 60px;
+  display: inline-block;
+  border-radius: 10px;
+  line-height: 30px;
+}
+.shopshadow .cardline ul li .delete img {
+  width: 20px;
+  vertical-align: middle;
+}
+.shopshadow .cardline ul li a:hover {
+  background-color: #f4f4f4 !important;
+}
+.shopshadow .amountdata {
+  text-align: right;
+  font-size: 18px;
+  line-height: 40px;
+}
+.shopshadow .amountdata span {
+  font-weight: bold;
+  font-size: 30px;
+}
+.clickbtn {
+  background-color: #ec3838;
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 4px;
+  display: block;
+}
+.fn-clear {
+  overflow: hidden;
+}
+.fn-clear .fl {
+  float: left;
+}
+.fn-clear .fr {
+  float: right;
+}
+.btn-group {
+  display: flex;
+}
+.btn-group .btn {
+  flex-grow: 1;
+}
+/* button */
