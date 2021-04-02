@@ -17,7 +17,7 @@ var blueberry = new product("blueberry", "1.99", "healthy", 0, 'c5.jpg');
 var rainbow = new product("rainbow", "1.99", "happy feelings", 0, 'c6.jpg');
 var vanillagf = new product("vanilla(gf)", "1.99", "Best seller, without gluten", 0, 'c7.jpg');
 var original = new product("original", "1.99", "nice old taste", 0, 'c8.jpg');
-/* products */
+/* product list */
 var maindata = [vanilla, caramel, pumpkin, walnut, blueberry, rainbow, vanillagf, original];
 console.log(maindata)
 
@@ -31,9 +31,9 @@ console.log(maindata)
 var carddata = readdata();
 carddata == null ? carddata = [] : carddata;
 console.log(carddata);
-cardsum(carddata);/* change cart num */
+cardsum(carddata);/* change num */
 shopcard()
-/* fetch data */
+
 dom()
 function dom() {
 	let html = ''
@@ -63,7 +63,7 @@ function dom() {
 /* show popup */
 function shadowbox(price, png, name, desc, uid) {
 	console.log('ccc')
-	document.querySelector('.spec-text .price h1').innerHTML = "$"+price;
+	document.querySelector('.spec-text .price h1').innerHTML ="$"+ price;
 	document.querySelector('.spec-text >h1').innerHTML = name;
 	document.querySelector('.spec-img img').setAttribute('src', `./img/${png}`);
 	document.querySelector('.spec-img img').setAttribute('src', `./img/${png}`);
@@ -76,11 +76,11 @@ function shadowbox(price, png, name, desc, uid) {
 document.querySelector('.closebtn').addEventListener('click', function () {
 	document.querySelector('.spec').style.display = 'none';
 })
-/* cart pop up */
+/* show cart */
 document.querySelector('.showcard').addEventListener('click', function () {
 	document.querySelector('.shopshadow').style.display = 'block'
 })
-/* close */
+/* close it */
 document.querySelector('.closeshopcard').addEventListener('click', function () {
 	document.querySelector('.shopshadow').style.display = 'none';
 })
@@ -88,7 +88,7 @@ document.querySelector('.closeshopcard').addEventListener('click', function () {
 document.querySelector('.clickbtn').addEventListener('click', function () {
 	document.querySelector('.shopshadow').style.display = 'none';
 })
-/* add to cart */
+/* add */
 document.querySelector('.cardbtn').addEventListener('click', function () {
 
 	var index = this.getAttribute("uid");
@@ -122,9 +122,9 @@ function adddata(index) {
 
 	}
 	savedata(carddata)
-	/* change num */
+	
 	cardsum(carddata);
-	/* recal cart */
+
 	shopcard();
 	alert('success');
 	document.querySelector('.spec').style.display = 'none';
@@ -133,22 +133,22 @@ function adddata(index) {
 	})
 	document.querySelector('#quantity').value = '';
 }
-/* store data */
+/* save data */
 function savedata(card) {
 	sessionStorage.setItem("card", JSON.stringify(card));
 }
-/* read data */
+/* read */
 function readdata() {
 	var data = sessionStorage.getItem("card");
 	return JSON.parse(data);
 }
-/* show num */
+/* cart num */
 function cardsum(data) {
 	document.querySelector('.cardsum').innerHTML = data.length;
 }
 
 
-// show cart list
+// cart list
 function shopcard() {
 	var html = '';
 	carddata.forEach((ele, i) => {
@@ -167,7 +167,7 @@ function shopcard() {
 	document.querySelector('.cardline ul').innerHTML = html;
 	sumdata()
 }
-/* sum of price */
+/* sum */
 function sumdata() {
 	var sum = 0;
 	carddata.forEach((ele) => {
@@ -175,7 +175,7 @@ function sumdata() {
 	})
 	document.querySelector('.summoney').innerHTML = sum;
 }
-
+/* make category */
 document.querySelectorAll('.glazing button').forEach((ele) => {
 	ele.addEventListener('click', function () {
 		document.querySelectorAll('.glazing button').forEach((e) => {
@@ -184,7 +184,7 @@ document.querySelectorAll('.glazing button').forEach((ele) => {
 		this.classList = 'sure';
 	})
 })
-/* reduction */
+/* reduce */
 function reducesum(index) {
 	if (carddata[index].amount != 1) {
 		carddata[index].amount--;
@@ -193,7 +193,7 @@ function reducesum(index) {
 	}
 
 }
-/* addition */
+/* add */
 function addsum(index) {
 	carddata[index].amount++;
 	shopcard()
