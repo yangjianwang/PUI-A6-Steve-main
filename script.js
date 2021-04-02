@@ -9,14 +9,14 @@ function product(name, price, description, amount, png) {
 		name, price, description, amount, png
 	}
 }
-var vanilla = new product("vanilla", "$1.99", "Best seller, with gluten", 0, 'c1.jpg');
-var caramel = new product("caramel", "$1.99", "Super sweet", 0, 'c2.jpeg');
-var pumpkin = new product("pumpkin", "$1.99", "Nice taste", 0, 'c3.jpg');
-var walnut = new product("walnut", "$1.99", "Good Stuff", 0, 'c4.jpg');
-var blueberry = new product("blueberry", "$1.99", "healthy", 0, 'c5.jpg');
-var rainbow = new product("rainbow", "$1.99", "happy feelings", 0, 'c6.jpg');
-var vanillagf = new product("vanilla(gf)", "$1.99", "Best seller, without gluten", 0, 'c7.jpg');
-var original = new product("original", "$1.99", "nice old taste", 0, 'c8.jpg');
+var vanilla = new product("vanilla", "1.99", "Best seller, with gluten", 0, 'c1.jpg');
+var caramel = new product("caramel", "1.99", "Super sweet", 0, 'c2.jpeg');
+var pumpkin = new product("pumpkin", "1.99", "Nice taste", 0, 'c3.jpg');
+var walnut = new product("walnut", "1.99", "Good Stuff", 0, 'c4.jpg');
+var blueberry = new product("blueberry", "1.99", "healthy", 0, 'c5.jpg');
+var rainbow = new product("rainbow", "1.99", "happy feelings", 0, 'c6.jpg');
+var vanillagf = new product("vanilla(gf)", "1.99", "Best seller, without gluten", 0, 'c7.jpg');
+var original = new product("original", "1.99", "nice old taste", 0, 'c8.jpg');
 /* products */
 var maindata = [vanilla, caramel, pumpkin, walnut, blueberry, rainbow, vanillagf, original];
 console.log(maindata)
@@ -63,7 +63,7 @@ function dom() {
 /* show popup */
 function shadowbox(price, png, name, desc, uid) {
 	console.log('ccc')
-	document.querySelector('.spec-text .price h1').innerHTML = price;
+	document.querySelector('.spec-text .price h1').innerHTML = "$"+price;
 	document.querySelector('.spec-text >h1').innerHTML = name;
 	document.querySelector('.spec-img img').setAttribute('src', `./img/${png}`);
 	document.querySelector('.spec-img img').setAttribute('src', `./img/${png}`);
